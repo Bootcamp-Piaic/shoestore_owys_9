@@ -28,7 +28,7 @@ export const ProductIndex = () => {
                 <Grid container spacing={3} style={{ paddingLeft: '1%', paddingTop: '1%', paddingRight: '1%', paddingBottom: '1%' }}>
                     <Grid item xs={12}>
                         <Paper className={classes.paper}>
-                            <img src={'https://www.allenedmonds.com/on/demandware.static/-/Library-Sites-allen-edmonds-redesign/default/dw0b17fdb4/redesign/new-fall/desktop-slide-2.jpg'} alt={"Image not Found on Link"}></img>
+                            <img src={'https://www.allenedmonds.com/on/demandware.static/-/Library-Sites-allen-edmonds-redesign/default/dw0b17fdb4/redesign/new-fall/desktop-slide-2.jpg'} alt={"Pic not Found on Link"}></img>
                         </Paper>
                     </Grid>
                     <Grid item xs={12}>
