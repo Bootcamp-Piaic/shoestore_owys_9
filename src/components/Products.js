@@ -5,7 +5,6 @@ export const Products = () => {
   
     return (
         <div>
-            Welcome to products
             <Outlet></Outlet>
         </div>
     )

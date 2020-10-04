@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import { makeStyles } from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
@@ -12,6 +12,8 @@ import List from '@material-ui/core/List';
 import Divider from '@material-ui/core/Divider';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemText from '@material-ui/core/ListItemText';
+import MenuIcon from '@material-ui/icons/Menu';
+
 
 const useStyles = makeStyles((theme) => ({
     list: {
@@ -31,6 +33,7 @@ const useStyles = makeStyles((theme) => ({
     },
 }));
 export const Header = () => {
+    const navigate=useNavigate()
     const classes = useStyles();
     const [state, setState] = React.useState({
         left: false,
@@ -79,7 +82,7 @@ export const Header = () => {
                         <div>
                             {['left'].map((anchor) => (
                                 <React.Fragment key={anchor}>
-                                    <Button onClick={toggleDrawer(anchor, true)} color='inherit' className={classes.title}>{"Menu"}</Button>
+                                    <Button onClick={toggleDrawer(anchor, true)} color='inherit' className={classes.title}> <MenuIcon /></Button>
                                     <Drawer anchor={anchor} open={state[anchor]} onClose={toggleDrawer(anchor, false)}>
                                         {list(anchor)}
                                     </Drawer>
@@ -88,9 +91,13 @@ export const Header = () => {
                         {/* <MenuIcon /> */}
                     </IconButton>
                     <Typography variant="h6" className={classes.title}>
-                        Shoe Store
+                    <Button  color="inherit" style={{fontSize:35}}  onClick={() => {
+                                        navigate('/Home')
+                                    }}>
+                                        Shoe Store
+                                    </Button>
             </Typography>
-                    <Button color="inherit">By Owys</Button>
+            <Button color="inherit">By Owys</Button>
                 </Toolbar>
             </AppBar>
         </div>
