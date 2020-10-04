@@ -22,7 +22,7 @@ export const About = () => {
             <Paper className={classes.paper}>
                 <h1>About :</h1>
                 <h2>Developer : Awais Mansha</h2>
-                <img src={Awais} alt={"Owys Pic not Found"}></img>
+                <img width='100%' height='100%' src={Awais} alt={"Owys Pic not Found"}></img>
                 
                 <h3>All Rights Reserved</h3>
             </Paper>

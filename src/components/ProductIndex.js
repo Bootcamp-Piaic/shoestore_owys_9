@@ -28,7 +28,7 @@ export const ProductIndex = () => {
                 <Grid container spacing={3} style={{ paddingLeft: '1%', paddingTop: '1%', paddingRight: '1%', paddingBottom: '1%' }}>
                     <Grid item xs={12}>
                         <Paper className={classes.paper}>
-                            <img src={'https://www.allenedmonds.com/on/demandware.static/-/Library-Sites-allen-edmonds-redesign/default/dw0b17fdb4/redesign/new-fall/desktop-slide-2.jpg'} alt={"Pic not Found on Link"}></img>
+                            <img width='100%' height='100%' src={'https://www.allenedmonds.com/on/demandware.static/-/Library-Sites-allen-edmonds-redesign/default/dw0b17fdb4/redesign/new-fall/desktop-slide-2.jpg'} alt={"Pic not Found on Link"}></img>
                         </Paper>
                     </Grid>
                     <Grid item xs={12}>
@@ -40,7 +40,7 @@ export const ProductIndex = () => {
                         {Object.entries(shoes).map(([product_NAME, { name, image }]) => (
                             <Grid item xs={3}>
                                 <Paper key={product_NAME} className={classes.paper}>
-                                    <img src={image} alt={name}></img>
+                                    <img width='100%' height='100%' src={image} alt={name}></img>
                                     <h1>{name}</h1>
                                     <Button variant="contained" color="secondary" onClick={() => {
                                         navigate(product_NAME)
